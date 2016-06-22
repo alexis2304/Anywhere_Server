@@ -20,12 +20,12 @@ var server = http.createServer(function(req, res) {
 
 // Chargement de socket.io
 var io = require('socket.io').listen(server);
-console.log('                    _                   ');   
-console.log('                   | |                  ');
-console.log(' _ __ ___   ___  __| |_   _ ___  __ _   ');
-console.log('| \'_ ` _ \ / _ \/ _` | | | / __|/ _`|  ');
-console.log('| | | | | |  __/ (_| | |_| \__ \ (_| |  ');
-console.log('|_| |_| |_|\___|\__,_|\__,_|___/\__,_|  ');
+fs.readFile('medusa.txt', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  console.log(data);
+});
                                       
                                       
     console.log('----------------------------------');
