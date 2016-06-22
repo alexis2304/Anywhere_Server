@@ -25,14 +25,12 @@ fs.readFile('medusa.txt', 'utf8', function (err,data) {
     return console.log(err);
   }
   console.log(data);
-});
-                                      
-                                      
     console.log('----------------------------------');
     console.log(ServerName + ' ' + ServerVersion);
     console.log('Server created by ' + ServerCreator);
     console.log('Your ip is : ' + Myip);
     console.log('----------------------------------');
+});
 
 io.sockets.on('connection', function (socket) {
     
