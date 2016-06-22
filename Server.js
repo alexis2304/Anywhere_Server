@@ -1,5 +1,8 @@
 var http = require('http');
 var fs = require('fs');
+var ip = require('ip');
+ 
+var Myip = ip.address();
 
 var ServerVersion = '0.65b Stable';
 var ServerName    = 'Medusa';
@@ -21,6 +24,7 @@ var io = require('socket.io').listen(server);
     console.log('----------------------------------');
     console.log(ServerName + ' ' + ServerVersion);
     console.log('Server created by ' + ServerCreator);
+    console.log('Your ip is : ' + Myip);
     console.log('----------------------------------');
 
 io.sockets.on('connection', function (socket) {
