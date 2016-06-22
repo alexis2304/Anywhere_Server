@@ -4,7 +4,7 @@ var ip = require('ip');
  
 var Myip = ip.address();
 
-var ServerVersion = '0.65b Stable';
+var ServerVersion = '0.66b Stable';
 var ServerName    = 'Medusa';
 var ServerCreator = 'Alexis Gougaut'
 
