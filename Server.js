@@ -20,7 +20,14 @@ var server = http.createServer(function(req, res) {
 
 // Chargement de socket.io
 var io = require('socket.io').listen(server);
-
+console.log('                    _                 ');   
+console.log('                   | |                ');
+console.log(' _ __ ___   ___  __| |_   _ ___  __ _ ');
+console.log('| \'_ ` _ \ / _ \/ _` | | | / __|/ _` |');
+console.log('| | | | | |  __/ (_| | |_| \__ \ (_| |');
+console.log('|_| |_| |_|\___|\__,_|\__,_|___/\__,_|');
+                                      
+                                      
     console.log('----------------------------------');
     console.log(ServerName + ' ' + ServerVersion);
     console.log('Server created by ' + ServerCreator);
