@@ -39,13 +39,13 @@ io.sockets.on('connection', function (socket) {
     // =============================== \\
     
     // Fonction pour se connecter sur le serveur, et chercher un autre joueur.
-    socket.on('ConnectAndFind', function(ProceduralGenerationCode, Player_Position){
+    socket.on('ConnectAndFind', function(ProceduralGenerationCode){
         
         // On récup le socket du client
         var sock = socket;
         
         // On met le joueur dans le tableau
-        Clients.push({Name:socket.id, isPlaying: false, isSearching:true, PlayerSocket:sock, PlayerPosition:Player_Position});
+        Clients.push({Name:socket.id, isPlaying: false, isSearching:true, PlayerSocket:sock});
         
         // On dit au client que il s'est connecter avec succès
         socket.emit('OnConnected', 'Connexion réussis !');
