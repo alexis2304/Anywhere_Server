@@ -1,5 +1,5 @@
 # Anywhere Server
-version : v0.67b (Stable)
+version : v0.69 (Stable)
 
 # Installation
 - Telecharger ce repo Git
