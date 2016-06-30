@@ -71,7 +71,7 @@ io.sockets.on('connection', function (socket) {
         // On regarde dans la listes des client si il y en a un qui attend
         for(i = 0; i < Clients.length; i++){
             // Si on trouve un client qui n'a pas le même nom que nous et qui et en recherche...
-            if(Clients[i]['Name'] != PlayerName + '_' + socket.id && Clients[i]['isSearching'] == true){
+            if(Clients[i]['Name'] != socket.id && Clients[i]['isSearching'] == true){
                 // On met l'etat de recherche du recever en false
                 Clients[ClientId]['isSearching']        = false;
                 // On met l'etat de recherche de l'envoyer en false
