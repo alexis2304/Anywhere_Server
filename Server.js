@@ -39,13 +39,13 @@ io.sockets.on('connection', function (socket) {
     // =============================== \\
     
     // Fonction pour se connecter sur le serveur, et chercher un autre joueur.
-    socket.on('ConnectAndFind', function(ProceduralGenerationCode){
+    socket.on('ConnectAndFind', function(ProceduralGenerationCode, Player_Position){
         
         // On récup le socket du client
         var sock = socket;
         
         // On met le joueur dans le tableau
-        Clients.push({Name:socket.id, isPlaying: false, isSearching:true, PlayerSocket:sock});
+        Clients.push({Name:socket.id, isPlaying: false, isSearching:true, PlayerSocket:sock, PlayerPosition:Player_Position});
         
         // On dit au client que il s'est connecter avec succès
         socket.emit('OnConnected', 'Connexion réussis !');
@@ -88,7 +88,7 @@ io.sockets.on('connection', function (socket) {
         }
         
         // On affiche dans la console qu'on a pas trouver de partie, donc on et en attente d'un client.
-        console.log('Client ' + PlayerName + ' as not find a party on server... Wait for another player...');
+        console.log('Client ' + socket.id + ' as not find a party on server... Wait for another player...');
         socket.emit('OnClientNotFinded');
         
     });
